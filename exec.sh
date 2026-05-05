@@ -45,7 +45,7 @@ fi
 BIN="/tmp/cp_$(basename "$SRC" .cpp)_$$"
 
 CXXFLAGS=(
-    -std=c++17
+    -std=c++20
     -g
     -Wall -Wextra -Wshadow
     -fno-omit-frame-pointer
