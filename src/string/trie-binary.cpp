@@ -40,9 +40,15 @@ struct Trie {
         p->cnt--;
     }
 
+    // returns k-th smallest integer (0-indexed), O(32)
+    // k=0 returns the smallest, k=n-1 returns the largest
+    int kth(int k) {
+        return kth_largest(n - k - 1);
+    }
+
     // returns k-th largest integer (0-indexed), O(32)
     // k=0 returns the largest, k=n-1 returns the smallest
-    int kth(int k) {
+    int kth_largest(int k) {
         int res = 0;
         Node* p = root;
         for (int i = 31; i >= 0; i--) {
